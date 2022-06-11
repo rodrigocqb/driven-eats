@@ -49,6 +49,6 @@ function fecharPedido() {
                 "- Prato: " + prato[0] + "\n" +
                 "- Bebida: " + bebida[0] + "\n" +
                 "- Sobremesa: " + sobremesa[0] + "\n" +
-                "- Total: R$" + total;
+                "Total: R$ " + total;
     window.location.href = "https://wa.me/5521971343779?text=" + encodeURIComponent(message);
 }
