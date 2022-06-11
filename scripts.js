@@ -45,10 +45,14 @@ function selecionaOpcao() {
 }
 
 function fecharPedido() {
+    const nome = prompt("Qual o seu nome?");
+    const endereco = prompt("Qual o seu endereço?");
     let message = "Olá, gostaria de fazer o pedido:\n" +
                 "- Prato: " + prato[0] + "\n" +
                 "- Bebida: " + bebida[0] + "\n" +
                 "- Sobremesa: " + sobremesa[0] + "\n" +
-                "Total: R$ " + total;
+                "Total: R$ " + total + "\n\n" +
+                "Nome: " + nome + "\n" +
+                "Endereço: " + endereco;
     window.location.href = "https://wa.me/5521971343779?text=" + encodeURIComponent(message);
 }
