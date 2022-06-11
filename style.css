@@ -125,3 +125,6 @@ h3 {
 .fechar-pedido {
     background-color: #32B72F;
 }
+.fechar-pedido:hover {
+    cursor: pointer;
+}

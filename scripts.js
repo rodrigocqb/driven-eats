@@ -33,10 +33,10 @@ function selecionaOpcao() {
     }
 }
 function fecharPedido() {
-    let msg = "Olá, gostaria de fazer o pedido:\n" +
+    let message = "Olá, gostaria de fazer o pedido:\n" +
                 "- Prato: " + "\n" +
                 "- Bebida: " + "\n" +
                 "- Sobremesa: " + "\n" +
                 "- Total: "
-    window.location.href = "https://wa.me/5521971343779"
+    window.location.href = "https://wa.me/5521971343779?text=" + encodeURIComponent(message);
 }
