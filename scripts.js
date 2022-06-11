@@ -6,9 +6,9 @@ window.onload = () => {
 }
 
 let prato; //vetor onde é armazenado o nome do prato e o preço do mesmo
-let bebida; //vetor onde é armazenado o nome da bebida e o preço do mesma
-let sobremesa; //vetor onde é armazenado o nome da sobremesa e o preço do mesma
-let total;
+let bebida; //vetor onde é armazenado o nome da bebida e o preço da mesma
+let sobremesa; //vetor onde é armazenado o nome da sobremesa e o preço da mesma
+let total; //soma dos preços de cada opção
 
 function selecionaOpcao() {
     if (this.classList.contains("prato") === true) {
