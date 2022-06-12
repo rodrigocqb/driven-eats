@@ -36,7 +36,7 @@ function selecionaOpcao() {
     if (document.querySelector(".prato-escolhido") !== null &&
         document.querySelector(".bebida-escolhida") !== null &&
         document.querySelector(".sobremesa-escolhida") !== null) {
-        total = (prato[1]+bebida[1]+sobremesa[1]).toFixed(2);
+        total = (prato[1] + bebida[1] + sobremesa[1]).toFixed(2);
         console.log(total)
         let fechar = document.querySelector(".botao");
         fechar.classList.add("fechar-pedido");
@@ -51,10 +51,10 @@ function fecharPedido() {
     document.querySelector(".prato-final").innerHTML = prato[0];
     document.querySelector(".bebida-final").innerHTML = bebida[0];
     document.querySelector(".sobremesa-final").innerHTML = sobremesa[0];
-    document.querySelector(".preco-prato").innerHTML = "R$ "+ prato[1].toFixed(2);
-    document.querySelector(".preco-bebida").innerHTML = "R$ "+ bebida[1].toFixed(2);
-    document.querySelector(".preco-sobremesa").innerHTML = "R$ "+ prato[1].toFixed(2);
-    document.querySelector(".preco-final").innerHTML = "R$ "+ total;
+    document.querySelector(".preco-prato").innerHTML = "R$ " + prato[1].toFixed(2).replace(".", ",");
+    document.querySelector(".preco-bebida").innerHTML = "R$ " + bebida[1].toFixed(2).replace(".", ",");
+    document.querySelector(".preco-sobremesa").innerHTML = "R$ " + prato[1].toFixed(2).replace(".", ",");
+    document.querySelector(".preco-final").innerHTML = "R$ " + total.replace(".", ",");
     let confirma = document.querySelector(".confirmar-pedido");
     confirma.onclick = enviarMensagem;
     let cancela = document.querySelector(".cancelar-pedido");
@@ -68,12 +68,12 @@ function cancelarPedido() {
 function enviarMensagem() {
     const nome = prompt("Qual o seu nome?");
     const endereco = prompt("Qual o seu endereço?");
-    let message = "Olá, gostaria de fazer o pedido:\n" +
-                "- Prato: " + prato[0] + "\n" +
-                "- Bebida: " + bebida[0] + "\n" +
-                "- Sobremesa: " + sobremesa[0] + "\n" +
-                "Total: R$ " + total + "\n\n" +
-                "Nome: " + nome + "\n" +
-                "Endereço: " + endereco;
+    let message = `Olá, gostaria de fazer o pedido:
+- Prato: ${prato[0]}
+- Bebida: ${bebida[0]}
+- Sobremesa: ${sobremesa[0]}
+Total: R$ ${total}\n
+Nome: ${nome}
+Endereço: ${endereco}`;
     window.location.href = "https://wa.me/5521971343779?text=" + encodeURIComponent(message);
 }
