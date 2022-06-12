@@ -40,6 +40,7 @@ function selecionaOpcao() {
         console.log(total)
         let fechar = document.querySelector(".botao");
         fechar.classList.add("fechar-pedido");
+        fechar.innerHTML = "Fechar pedido"
         fechar.onclick = fecharPedido;
     }
 }
