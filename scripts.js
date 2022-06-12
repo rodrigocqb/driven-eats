@@ -40,12 +40,32 @@ function selecionaOpcao() {
         console.log(total)
         let fechar = document.querySelector(".botao");
         fechar.classList.add("fechar-pedido");
-        fechar.innerHTML = "Fechar pedido"
+        fechar.innerHTML = "Fechar pedido";
         fechar.onclick = fecharPedido;
     }
 }
 
+let pedido = document.querySelector(".fundo-confirmacao");
 function fecharPedido() {
+    pedido.classList.remove("escondido");
+    document.querySelector(".prato-final").innerHTML = prato[0];
+    document.querySelector(".bebida-final").innerHTML = bebida[0];
+    document.querySelector(".sobremesa-final").innerHTML = sobremesa[0];
+    document.querySelector(".preco-prato").innerHTML = "R$ "+ prato[1].toFixed(2);
+    document.querySelector(".preco-bebida").innerHTML = "R$ "+ bebida[1].toFixed(2);
+    document.querySelector(".preco-sobremesa").innerHTML = "R$ "+ prato[1].toFixed(2);
+    document.querySelector(".preco-final").innerHTML = "R$ "+ total;
+    let confirma = document.querySelector(".confirmar-pedido");
+    confirma.onclick = enviarMensagem;
+    let cancela = document.querySelector(".cancelar-pedido");
+    cancela.onclick = cancelarPedido;
+}
+
+function cancelarPedido() {
+    pedido.classList.add("escondido");
+}
+
+function enviarMensagem() {
     const nome = prompt("Qual o seu nome?");
     const endereco = prompt("Qual o seu endereço?");
     let message = "Olá, gostaria de fazer o pedido:\n" +

@@ -86,6 +86,7 @@ h3 {
 .escolhas span {
     color: #000000;
     font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 .escolhas img {
     width: 144px;
@@ -143,4 +144,71 @@ h3 {
 }
 .prato-escolhido > ion-icon, .bebida-escolhida > ion-icon, .sobremesa-escolhida > ion-icon {
     color: #32B72F;
+}
+.confirmacao {
+    background-color: #50D074;
+    width: 377px;
+    height: 353px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    padding: 20px 24px;
+    color: #FFFFFF;
+    position: fixed;
+    top: 336.5px;
+    left: 18.5px;
+    z-index: 2;
+}
+.confirmacao h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+.confirmacao p {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+.escondido {
+    display: none;
+}
+.confirmar-pedido {
+    background-color: #FFFFFF;
+    color: #50D074;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 100px;
+    width: 329px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+}
+.cancelar-pedido {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.confirmacao div div {
+    display: flex;
+    justify-content: space-between;
+}
+.confirm-list {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.fundo-confirmacao {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
